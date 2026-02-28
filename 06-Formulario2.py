@@ -35,6 +35,6 @@ messagebox.showinfo("Título","Este es un mensaje de información")
 if respuesta:
     print("El usuario dijo sí")
 else:
-    print("El usuario dijo no")
+    print("El usuario dijo no")'''
 
-ventana.mainloop()'''
+ventana.mainloop()
