@@ -5,6 +5,16 @@ root.title("Ventana Responsiva")
 root.geometry("400x300") # Tamaño inicial
 root.minsize(300, 200) # Tamaño mínimo de seguridad
 
+# Cambiar el icono
+# Asegúrate de tener el archivo 'formulario.ico' en la misma carpeta
+try:
+    root.iconbitmap("formulario.ico")
+except:
+    print("Icono no encontrado, asegúrate de que 'formulario.ico' está en la ruta.")
+
+# --- Opción 1: Maximizar (Windows/Linux) ---
+root.state('zoomed')
+
 # --- Configuración Responsiva (Core) ---
 # Configuramos la fila 0 y columna 0 para que se expandan
 root.rowconfigure(0, weight=1)
