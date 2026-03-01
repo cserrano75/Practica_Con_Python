@@ -7,27 +7,29 @@ ventana.title("Principal")
 def create_widget(parent, widget_type, **options):
     return widget_type(parent, **options)
 
-frame = create_widget(
-    ventana, tkinter.Frame,
-    bg='grey', bd=3, cursor='hand2',
-    height=100, width=200,
-    highlightcolor='red',
-    highlightbackground='black',
-    highlightthickness=2,
-    relief=tkinter.RAISED
-)
-frame.grid(row=0, column=0, padx=100, pady=100)
+def saludo():
+    print("Hola... ")
 
-label = create_widget(
-    frame, tkinter.Label,
-    text='GeeksForGeeks',
-    font='50', bg='grey',
-    bd=3, cursor='hand2',
-    highlightcolor='red',
-    highlightbackground='black',
-    highlightthickness=1,
-    relief=tkinter.RAISED
-)
-label.grid(row=0, column=1, padx=10, pady=5)
+#Creo un primer Frame
+frame1 = tkinter.LabelFrame(ventana, text="Datos Proyecto", padx=150, pady=150)
+# Displaying the frame1 in row 0 and column 0
+frame1.grid(row=0, column=0)
+
+# Agrego un boton
+b1 = tkinter.Button(frame1, text="Apple")
+
+# Displaying the button b1
+b1.pack()
+
+#Creo un segundo Frame
+frame2 = tkinter.LabelFrame(ventana, text="Datos Cotización", padx=150, pady=150)
+# Displaying the frame1 in row 0 and column 0
+frame2.grid(row=0, column=1)
+
+# Agrego un boton
+b2 = tkinter.Button(frame2, text="Apple")
+
+# Displaying the button b1
+b2.pack()
 
 ventana.mainloop()
